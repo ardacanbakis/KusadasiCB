@@ -7,7 +7,7 @@
     --nav-bg: #333;
     --nav-text: #fff;
     --card-bg: #ffffff;
-    --accent-color: #ff6b6b;
+    --accent-color: #63c7de;
 }
 
 [data-theme="dark"] {
@@ -19,7 +19,7 @@
     --nav-bg: #8e7c4f;
     --nav-text: #0d0d0d;
     --card-bg: #333333;
-    --accent-color: #ff7675;
+    --accent-color: #2596be;
 }
 
 * {
@@ -113,8 +113,7 @@ h1, h2, h3, h4, h5, h6 {
 /* Hero Section */
 .hero {
     height: 50vh;
-    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
-                url('/api/placeholder/1920/1080') center/cover;
+    background: url(assets/crossfit-kusadasi-01.jpg) center/cover no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -149,13 +148,15 @@ h1, h2, h3, h4, h5, h6 {
     filter: brightness(1.1);
 }
 
+
 /* Info Grid */
 .info-grid {
+    background-color: var(--bg-primary);
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
     padding: 4rem 1rem;
-    max-width: 1200px;
+    max-width: 100%;
     margin: 0 auto;
 }
 
@@ -163,10 +164,27 @@ h1, h2, h3, h4, h5, h6 {
     background: var(--card-bg);
     padding: 2rem;
     border-radius: 10px;
-    text-align: center;
+
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
+.info-card h3{
+    justify-self: center;
+    margin-bottom: 1rem;
+}
+.info-card h4 {
+    margin-top: 15px;
+    margin-bottom: 8px;
+    font-weight: bolder;
+}
 
+/* .info-card span {
+    display: block;
+    margin-bottom: 0.2rem;
+} */
+
+.info-card span[data-i18n^="info.hours."] {
+    padding-left: 1.5rem;
+}
 /* About Section */
 .about {
     padding: 4rem 1rem;
@@ -178,7 +196,18 @@ h1, h2, h3, h4, h5, h6 {
     margin: 0 auto;
     text-align: center;
 }
+section h2{
+    justify-self: center;
+}
 
+/* Google Maps */
+.google-maps iframe{
+    width: 80%;
+    margin-right: 10%;
+    margin-left: 10%;
+    margin-top: 0.5%;
+    margin-bottom: 1%;
+}
 /* Footer */
 footer {
     background: var(--nav-bg);
@@ -201,11 +230,7 @@ footer {
     display: flex;
     gap: 1rem;
 }
-.social-links a {
-    color: var(--nav-text);
-    font-size: 1.5rem;
-    transition: color 0.3s;
-}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .nav-links {
@@ -247,5 +272,8 @@ footer {
 
     .controls {
         flex-direction: column;
+    }
+    .social-links {
+        justify-content: center;
     }
 }

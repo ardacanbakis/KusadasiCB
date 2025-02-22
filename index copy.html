@@ -17,12 +17,32 @@
         </select>
     </div>
 
-    <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
-            <a href="#" class="logo" data-i18n="nav.logo">CrossBox Kuşadası</a>
-            <div class="menu-btn">☰</div>
-            <ul class="nav-links">
+            <!-- Left Side Links -->
+            <ul class="nav-links left-links">
+                <li><a href="#about" data-i18n="nav.about">About Us</a></li>
+                <li><a href="#crossfit" data-i18n="nav.crossfit">CrossFit</a></li>
+                <li><a href="#nutrition" data-i18n="nav.nutrition">Nutrition</a></li>
+            </ul>
+
+            <!-- Center Logo -->
+            <a href="#" class="logo" data-i18n="nav.logo">FitLife Gym</a>
+
+            <!-- Right Side Controls -->
+            <div class="right-controls">
+                <div class="controls">
+                    <select class="lang-select" onchange="changeLanguage(this.value)">
+                        <option value="en">EN</option>
+                        <option value="tr">TR</option>
+                    </select>
+                    <button class="theme-toggle" onclick="toggleTheme()">🌓</button>
+                </div>
+                <div class="menu-btn">☰</div>
+            </div>
+
+            <!-- Mobile Menu (hidden by default) -->
+            <ul class="mobile-nav">
                 <li><a href="#about" data-i18n="nav.about">About Us</a></li>
                 <li><a href="#crossfit" data-i18n="nav.crossfit">CrossFit</a></li>
                 <li><a href="#nutrition" data-i18n="nav.nutrition">Nutrition</a></li>
@@ -32,35 +52,31 @@
         </div>
     </nav>
 
+
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-content">
-            <!-- <h1 data-i18n="hero.title">Transform Your Life</h1>
+            <h1 data-i18n="hero.title">Transform Your Life</h1>
             <p data-i18n="hero.subtitle">Join our community and achieve your fitness goals</p>
-            <a href="#" class="cta-btn" data-i18n="hero.cta">Join Now</a> -->
+            <a href="#" class="cta-btn" data-i18n="hero.cta">Join Now</a>
         </div>
     </section>
 
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="about-content">
+            <h2 data-i18n="about.title">About Us</h2>
+            <p data-i18n="about.description"></p>
+        </div>
+    </section>
 
     <!-- Info Grid -->
     <section class="info-grid">
         <div class="info-card">
             <h3 data-i18n="info.hours.title">Working Hours</h3>
             <p>
-                <h4 data-i18n="info.hours.weekdays.title">Weekdays</h4>
-                <span data-i18n="info.hours.weekdays.slot1">09:00 - 12:30 OPEN GYM</span><br>
-                <span data-i18n="info.hours.weekdays.slot2">12:30 - 13:30 WOD</span><br>
-                <span data-i18n="info.hours.weekdays.slot3">13:30 - 17:30 OPEN GYM</span><br>
-                <span data-i18n="info.hours.weekdays.slot4">17:30 - 21:30 WOD</span><br>
-
-                <h4 data-i18n="info.hours.saturday.title">Saturday</h4>
-                <span data-i18n="info.hours.saturday.slot1">09:00 - 12:30 OPEN GYM</span><br>
-                <span data-i18n="info.hours.saturday.slot2">12:30 - 13:30 WOD</span><br>
-                <span data-i18n="info.hours.saturday.slot3">13:30 - 16:00 OPEN GYM</span><br>
-                <span data-i18n="info.hours.saturday.slot4">16:00 - 17:00 WOD</span><br>
-
-                <h4 data-i18n="info.hours.sunday.title">Sunday</h4>
-                <span data-i18n="info.hours.sunday.status">Kapalı</span>
+                <span data-i18n="info.hours.weekdays">Mon-Fri: 6:00 AM - 10:00 PM</span><br>
+                <span data-i18n="info.hours.weekends">Sat-Sun: 8:00 AM - 8:00 PM</span>
             </p>
         </div>
         <div class="info-card">
@@ -74,22 +90,13 @@
         <div class="info-card">
             <h3 data-i18n="info.prices.title">Membership Prices</h3>
             <p>
-                <span data-i18n="info.prices.monthly">Monthly:</span><br>
-                <span data-i18n="info.prices.quarterly">3 months:</span><br>
-                <span data-i18n="info.prices.yearly">6months: </span>
+                <span data-i18n="info.prices.monthly">Monthly: $49</span><br>
+                <span data-i18n="info.prices.quarterly">Quarterly: $129</span><br>
+                <span data-i18n="info.prices.yearly">Yearly: $449</span>
             </p>
         </div>
     </section>
-    <!-- About Section -->
-    <section class="about" id="about">
-        <div class="about-content">
-            <h2 data-i18n="about.title">About Us</h2>
-            <p data-i18n="about.description"></p>
-            <p data-i18n="about.description2"></p>
-        </div>
-    </section>
 
-    <!-- Google Maps -->
     <section class="google-maps">
         <h2 data-i18n="info.location"></h2>
         <div class="google-maps">
@@ -102,14 +109,7 @@
     <footer>
         <div class="footer-content">
             <div class="footer-section" id="footer-logo">
-                <a href="https://www.crossboxkusadasi.com/" target="_blank"><img src="/assets/smallLogo.png" alt="Logo"></a>
-            </div>
-            <div class="footer-section">
-                <h4 data-i18n="footer.social.title"></h4>
-                <div class="social-links">
-                    <a href="https://www.instagram.com/crossboxkusadasi" target="_blank"><img src="assets/footer-sm-instagram.png"></a>
-                    <a href="https://www.facebook.com/crossboxkusadasi/" target="_blank"><img src="assets/footer-sm-facebook.png" alt=""></a>
-                </div>
+                <img src="/assets/smallLogo.png" alt="Logo">
             </div>
             <div class="footer-section">
                 <h4 data-i18n="footer.contact.title"></h4>
@@ -120,6 +120,13 @@
                 <h4 data-i18n="footer.address.title"></h4>
                 <p data-i18n="footer.address.line1"></p>
                 <p data-i18n="footer.address.line2"></p>
+            </div>
+            <div class="footer-section">
+                <h4 data-i18n="footer.social.title"></h4>
+                <div class="social-links">
+                    <a href="https://www.instagram.com/crossboxkusadasi" target="_blank"><img src="assets/footer-sm-instagram.png"></a>
+                    <a href="https://www.facebook.com/crossboxkusadasi/" target="_blank"><img src="assets/footer-sm-facebook.png" alt=""></a>
+                </div>
             </div>
         </div>
     </footer>
