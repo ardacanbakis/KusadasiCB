@@ -1,0 +1,116 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FitLife Gym</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Theme and Language Controls -->
+    <div class="controls">
+        <button class="theme-toggle" onclick="toggleTheme()">🌓</button>
+        <select class="lang-select" onchange="changeLanguage(this.value)">
+            <option value="en">English</option>
+            <option value="tr">Türkçe</option>
+        </select>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo" data-i18n="nav.logo">FitLife Gym</a>
+            <div class="menu-btn">☰</div>
+            <ul class="nav-links">
+                <li><a href="#about" data-i18n="nav.about">About Us</a></li>
+                <li><a href="#crossfit" data-i18n="nav.crossfit">CrossFit</a></li>
+                <li><a href="#nutrition" data-i18n="nav.nutrition">Nutrition</a></li>
+                <li><a href="#gallery" data-i18n="nav.gallery">Gallery</a></li>
+                <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1 data-i18n="hero.title">Transform Your Life</h1>
+            <p data-i18n="hero.subtitle">Join our community and achieve your fitness goals</p>
+            <a href="#" class="cta-btn" data-i18n="hero.cta">Join Now</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="about-content">
+            <h2 data-i18n="about.title">About Us</h2>
+            <p data-i18n="about.description">FitLife Gym is dedicated to helping you achieve your fitness goals through state-of-the-art equipment, expert guidance, and a supportive community.</p>
+        </div>
+    </section>
+
+    <!-- Info Grid -->
+    <section class="info-grid">
+        <div class="info-card">
+            <h3 data-i18n="info.hours.title">Working Hours</h3>
+            <p>
+                <span data-i18n="info.hours.weekdays">Mon-Fri: 6:00 AM - 10:00 PM</span><br>
+                <span data-i18n="info.hours.weekends">Sat-Sun: 8:00 AM - 8:00 PM</span>
+            </p>
+        </div>
+        <div class="info-card">
+            <h3 data-i18n="info.rules.title">Gym Rules</h3>
+            <p>
+                <span data-i18n="info.rules.rule1">Respect equipment and others</span><br>
+                <span data-i18n="info.rules.rule2">Clean after use</span><br>
+                <span data-i18n="info.rules.rule3">Bring proper attire</span>
+            </p>
+        </div>
+        <div class="info-card">
+            <h3 data-i18n="info.prices.title">Membership Prices</h3>
+            <p>
+                <span data-i18n="info.prices.monthly">Monthly: $49</span><br>
+                <span data-i18n="info.prices.quarterly">Quarterly: $129</span><br>
+                <span data-i18n="info.prices.yearly">Yearly: $449</span>
+            </p>
+        </div>
+    </section>
+
+    <section>
+        <div class="google-maps">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3150.935390097409!2d27.2585254!3d37.838398399999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14bea9ced3e2946d%3A0x61a53a939a13509!2zQ3Jvc3NCb3ggS3XFn2FkYXPEsQ!5e0!3m2!1sen!2str!4v1740201741754!5m2!1sen!2str" width=100% height=100% style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section" id="footer-logo">
+                <h4 data-i18n="footer.title"></h4>
+                <img src="/assets/smallLogo.png" alt="Logo">
+            </div>
+            <div class="footer-section">
+                <h4 data-i18n="footer.contact.title"></h4>
+                <p data-i18n="footer.contact.phone"></p>
+                <p data-i18n="footer.contact.email"></p>
+            </div>
+            <div class="footer-section">
+                <h4 data-i18n="footer.address.title"></h4>
+                <p data-i18n="footer.address.line1"></p>
+                <p data-i18n="footer.address.line2"></p>
+            </div>
+            <div class="footer-section">
+                <h4 data-i18n="footer.social.title"></h4>
+                <div class="social-links">
+                    <a href="https://www.instagram.com/crossboxkusadasi" target="_blank"><img src="assets/footer-sm-instagram.png"></a>
+                    <a href="https://www.facebook.com/crossboxkusadasi/" target="_blank"><img src="assets/footer-sm-facebook.png" alt=""></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="translations.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
